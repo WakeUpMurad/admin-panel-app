@@ -1,9 +1,8 @@
-export const SvgSprite = ({
+const SvgSprite = ({
   viewBox = "0 0 16 16",
   className = "svg",
   xmlnsXlink = "http://www.w3.org/1999/xlink",
-}) => {
-  return (
+}) => (
     <svg className={className} version="1.1" xmlnsXlink={xmlnsXlink}>
       <symbol id="incorrect" viewBox={viewBox}>
         <path d="M12.5 3.5L3.5 12.5M3.5 3.5L12.5 12.5" />
@@ -92,5 +91,6 @@ export const SvgSprite = ({
         />
       </symbol>
     </svg>
-  );
-};
+)
+
+export default SvgSprite;

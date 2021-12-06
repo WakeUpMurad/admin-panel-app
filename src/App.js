@@ -1,24 +1,23 @@
-import '../src/css/reset.css';
-import '../src/css/style.css';
-import { Provider } from 'react-redux'
-import { store } from './store'
-import ModalForm from './components/ModalForm/ModalForm';
-import { MainTable } from './components/MainTable/MainTable'
+import './style/reset.css';
+import './style/style.css';
+import { Provider } from 'react-redux';
+import { store } from './store';
+import ModalForm from './containers/ModalForm';
+import Header from './containers/Header';
+import Table from './containers/Table';
+import { OrdersFilter } from "./containers/Filters/OrdersFilter";
+import SvgSprite from './components/Icons/SvgSprite';
 
-
-function App() {
-  return (
-      <Provider store={store}>
+const App = () => (
+    <Provider store={store}>
         <ModalForm />
-        {/* <div className="main-wrapper">
-            <PageHeader />
+        <div className="main-wrapper">
+            <Header />
             <OrdersFilter />
-            <OrdersTable />
-            <SvgSprite />
-        </div> */}
-        <MainTable />
-      </Provider>
-  );
-}
+            <Table />
+        </div>
+        <SvgSprite />
+    </Provider>
+)
 
 export default App;

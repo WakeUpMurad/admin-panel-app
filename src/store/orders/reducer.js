@@ -1,5 +1,5 @@
 import { ordersActionTypes } from "./actions";
-import Mocks from "../../data/Orders.json";
+import Mocks from "../../mockOrders/orders.json";
 
 const initialState = [...Mocks];
 
